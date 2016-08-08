@@ -1,0 +1,20 @@
+{
+  "name": "node-tradedoubler",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./build/src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cesar Contreras <ccdl15c@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "lodash": "^4.14.1",
+    "superagent": "^2.1.0"
+  }
+}
