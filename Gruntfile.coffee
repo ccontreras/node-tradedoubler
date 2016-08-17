@@ -4,25 +4,17 @@ module.exports = (grunt) ->
         watch:
             files: ['src/**/*.coffee']
             tasks: ['coffee']
-        copy:
-            default:
-                files: [
-                    {
-                        expand: true
-                        src: ['compile/src/*']
-                        dest: 'dist/'
-                    }
-                ]
         coffee:
             default:
                 options:
                     bare: true
                 expand: true
-                src: ['coffee/src/**/*.coffee']
-                dest: './src'
+                cwd: 'src'
+                src: ['**/*.coffee']
+                dest: 'lib'
                 ext: '.js'
 
     grunt.loadNpmTasks 'grunt-contrib-watch'
     grunt.loadNpmTasks 'grunt-contrib-coffee'
 
-    grunt.registerTask 'default', ['coffee', 'copy']
+    grunt.registerTask 'default', ['coffee']
